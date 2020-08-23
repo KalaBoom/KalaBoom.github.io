@@ -1,0 +1,996 @@
+/* All*/
+* {
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    box-sizing: border-box;
+
+}
+
+/* Basic */
+html {
+    font-size: 10px;
+}
+
+/* Main */
+.main {
+    margin: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Header */
+header {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    width: 70%;
+    height: 10vh;
+}
+ul.header {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    flex-direction: row;
+    list-style-type: none;
+}
+ul.header li a {
+    font-family: 'Lato', sans-serif;
+    text-decoration: none;
+    font-size: 1.5rem;
+    margin-right: 10px;
+    padding: 0.5rem;
+    text-align: center;
+    flex-grow: 1;
+    color: black;
+    text-transform: uppercase;
+}
+ul.header li a:hover {
+    background-color: #ffbb42;
+    color: white;
+    transition: 500ms;
+}
+
+@media only screen and (max-width : 1224px) {
+    ul.header li a {
+        font-size: 1.3rem;
+        margin-right: 5px;
+    }
+}
+
+@media only screen and (max-width: 900px) {
+    ul.header li a {
+        font-size: 1.1rem;
+        margin-right: 3px;
+        padding: 0.3rem;
+    }
+    ul.header li a {
+        margin-bottom: 0.5em;
+    }
+}
+
+/* Banner */
+.banner {
+    font-size: 15pt;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 450px;
+    text-align: center;
+    background-color: #709dca;
+}
+.banner h1{
+    font-size: 30pt;
+    margin-top: 50px;
+    font-family: 'Open Sans', sans-serif;
+    text-transform: uppercase;
+}
+
+
+.formRequest {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.formRequest input {
+    height: 57px;
+    width: 300px;
+    border-radius: 3px;
+    margin-right: 20px;
+}
+
+i.fa {
+    text-align: center;
+    position: relative;
+    margin-right: -35px;
+    z-index: 1;
+}
+i.fa + input {
+    padding-left: 40px;
+}
+.formRequest i {
+    color: black
+}
+.formRequest button {
+    margin-left: -10px;
+    height: 57px;
+    width: 278px;
+    font-size: 14pt;
+    color: white;
+    background-color: #ffbb42;
+    text-decoration: none;
+    text-transform: uppercase;
+    outline: none;
+    padding: 10px 30px;
+    border-style: none;
+    border-width: 2px 0;
+    border-radius: 2px;
+    transition: 0.2s;
+}
+
+.formRequest button:hover {
+    background-color: #ffa200;
+}
+.slider .item img {
+    position: absolute;
+    top: 25px;
+    left: 90px;
+    width: 420px;
+    height: 250px;
+    border: none !important;
+    box-shadow: none !important; 
+}
+
+.slider{
+    position: relative;
+    height: 300px;
+    width: 600px;
+    padding: 170px;
+    background-image: url('../img/computer.png');
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+@media only screen and (max-width : 1224px) {
+    .banner {
+        font-size: 10pt;
+    }
+    .banner h1 {
+        font-size: 20pt;
+    }
+    .formRequest input {
+        height: 40px;
+        width: 200px;
+        margin-right: 2em;
+    }
+    .formRequest button {
+        height: 40px;
+        width: 200px;
+        font-size: 11pt;
+    }
+}
+
+@media only screen and (max-width: 900px) {
+    .banner h1 {
+        font-size: 15pt;
+    }
+    .formRequest input {
+        height: 30px;
+        width: 150px;
+    }
+    .formRequest button {
+        height: 30px;
+        width: 150px;
+        font-size: 7pt;
+    }
+    i.fa {
+        margin-right: -30px;
+    }
+    i.fa + input {
+        padding-left: 30px;
+    }
+    .slider .item img {
+        top: 53px;
+        left: 60px;
+        width: 280px;
+        height: 170px;
+    }
+    
+    .slider{
+        height: 200px;
+        width: 400px;
+        padding: 150px;
+    }
+}
+
+@media only screen and (max-width: 630px) {
+    .banner h1 {
+        font-size: 10pt;
+    }
+    .formRequest input {
+        height: 20px;
+        width: 110px;
+        font-size: 10px;
+    }
+    .formRequest button {
+        height: 20px;
+        width: 110px;
+        font-size: 5px;
+    }
+}
+
+@media only screen and (max-width: 450px) {
+    .formRequest {
+        flex-direction: column;
+        justify-content: center;
+    }
+    .formRequest input {
+        margin-bottom: 1em;
+    }
+    i.fa {
+        margin-right: -25px;
+        font-size: 10px;
+    }
+    i.fa + input {
+        padding-left: 30px;
+    }
+    #name {
+        margin-left: 0.3em;
+    }
+}
+
+/* Кнопки вперед и назад */
+.slider .prev, .slider .next {
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+}
+.slider .next {
+    right: 10px;
+    border-radius: 3px 0 0 3px;
+}
+
+.slider .prev {
+    left: 10px;
+    border-radius: 3px 0 0 3px;
+}
+/* При наведении на кнопки добавляем фон кнопок */
+.slider .prev:hover,
+.slider .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Кружочки */
+.slider-dots {
+    text-align: center;
+}
+.slider-dots_item{
+    cursor: pointer;
+    height: 20px;
+    width: 20px;
+    margin: 0 2px;
+    display: inline-block;
+    transition: background-image 0.6s ease;
+    background-image: url('../img/SVG/icon-slider-cicle-disable.svg');
+    background-size: contain;
+}
+.active,
+.slider-dots_item:hover {
+    background-image: url('../img/SVG/icon-slider-circle.svg');
+}
+/* Анимация слайдов */
+.slider .item {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+@-webkit-keyframes fade {
+    from {
+        opacity: .4
+    }
+    to {
+        opacity: 1
+    }
+}
+@keyframes fade {
+    from {
+        opacity: .4
+    }
+    to {
+        opacity: 1
+    }
+}
+
+
+/* Service */
+.service {
+    display: flex;
+    position: relative;
+    top: 20vh;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Open Sans', sans-serif;
+}
+.service .header {
+    text-align: center;
+    margin-bottom: 5rem;
+}
+.service .header h1 {
+    font-size: 30pt;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+.service .header p {
+    font-size: 16pt;
+}
+
+.service table{
+    border-spacing: 3rem 2rem;
+}
+    
+.service table tr td.image{
+    text-align: center;
+    padding-left: 5rem;
+}
+.service table tr td.text h1{
+    font-family: 'Lato', sans-serif;
+    font-weight: bold;
+    font-size: 16pt;
+    text-transform: uppercase;
+}
+.service table tr td.text p{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 13pt;
+}
+
+@media only screen and (max-width : 1224px) {
+    .service .header h1 {
+        font-size: 20pt;
+    }
+    .service .header p {
+        font-size: 14pt;
+    }
+    .service table tr td.text h1{
+        font-size: 10pt;
+    }
+    .service table tr td.text p{
+        font-size: 7pt;
+    }
+}
+
+@media only screen and (max-width: 900px) {
+    .service .header h1 {
+        font-size: 15pt;
+    }
+    .service .header p {
+        font-size: 9pt;
+    }
+    .service table tr td.text h1{
+        font-size: 7pt;
+    }
+    .service table tr td.text p{
+        font-size: 5pt;
+    }
+    td.image  img{
+        height: 30px;
+        width: 30px;
+    }
+    .service table{
+        border-spacing: 1rem 0.5rem;
+    }
+}
+
+/* About us*/
+.about-us{
+    display: flex;
+    position: relative;
+    top: 35vh;
+}
+
+.about-us .image img{
+    height: 500px;
+}
+.about-us .text{
+    min-height: 10em;
+    background-color: #ffc155;
+    color: white;
+    padding-top: 5%;
+    padding-left: 5%;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 13pt;
+    padding-right: 150px;
+}
+.about-us .text h1{
+    font-size: 30pt;
+}
+.about-us .text button{
+    width: 192px;
+    height: 57px;
+    background-color: #ffc155;
+    margin-top: 48px;
+    color: white;
+    text-transform: uppercase;
+    border-style: none;
+    border: 1px solid #e7ad48;
+    transition: 1s;
+}
+.about-us .text button:hover{
+    background-color: #e7ad48;
+    cursor: pointer;
+}
+
+@media only screen and (max-width: 1224px) {
+    .about-us .image img {
+        height: 50vh;
+        width: 50vw;
+    }
+    .about-us .text {
+        font-size: 10pt;
+        padding-right: 10px;
+        height: 50vh;
+    }
+}
+@media only screen and (max-width: 900px) {
+    .about-us .text button {
+        margin-top: 20px;
+        width: 160px;
+        height: 40px;
+        font-size: 14px;
+    }
+    .about-us .text h1 {
+        font-size: 20pt;
+    } 
+}
+@media only screen and (max-width: 600px) {
+    .about-us .image {
+        display: none;
+    }
+}
+/* Choos your price */
+.choose-your-pricing{
+    position: relative;
+    width: 100%;
+    top: 33vh;
+    text-transform: uppercase;
+    background-color: #e7edf3;
+    font-family: 'Open Sans', sans-serif;
+}
+.choose-your-pricing .header{
+    text-align: center;
+    padding-top: 100px;
+}
+.choose-your-pricing .header h1{
+    font-size: 30pt;
+    font-weight: bold;
+}   
+.choose-your-pricing .header p{
+    font-size: 18pt;
+    text-transform: none;
+    color: #818b95;
+}
+.choose-your-pricing .pricing{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.choose-your-pricing .pricing .price{
+    margin: 96px 0;
+    height: 576px;
+    width: 30%;
+    border: 1px solid #ccd5df;
+    text-align: center;
+    background-color: white;
+    color: #818b95;
+    padding: 38px 50px 28px;
+    transition: 1s;
+}
+.choose-your-pricing .pricing .price:hover{
+    background-color: #709dca;
+    color: white;
+    transform: scale(1.1);
+}
+.choose-your-pricing .pricing .price:hover h2{
+    transition: 1s;
+    color:white;
+}
+.choose-your-pricing .pricing .price h1{
+    font-weight: normal;
+    font-size: 25pt;
+}
+.choose-your-pricing .pricing .price h2{
+    color: #ffbb42;
+    font-size: 60pt;
+}
+.choose-your-pricing .pricing .price h2 sup{
+    font-size: 30pt;
+}
+.choose-your-pricing .pricing .price p.down-h2{
+    position: relative;
+    top: -15px;
+    font-size: 15pt;
+    margin-top: 0;
+    margin-bottom: 30px;
+}
+.choose-your-pricing .pricing .price div hr {
+    border-style: solid;
+    border-color: #e2e9f0;
+}
+.choose-your-pricing .pricing .price div p{
+    font-size: 13pt;
+    padding: 15px 0;
+}
+.choose-your-pricing .pricing .price div button{
+    background-color: #ffbb42;
+    color: white;
+    text-transform: uppercase;
+    height: 50px;
+    width: 153px;
+    border-style: none;
+    border-radius: 2px;
+    transition: 1s;
+}
+.choose-your-pricing .pricing .price div button:hover{
+    background-color: #ffa200;
+}
+
+@media only screen and (max-width: 900px) {
+    .choose-your-pricing .pricing .price{
+        margin: 96px 0;
+        height: 450px;
+        width: 30%;
+        padding: 38px 50px 28px;
+        min-width: 200px;
+        margin-right: 2em;
+        margin-bottom: 0;
+    }
+    .choose-your-pricing .header h1{
+        font-size: 20pt;
+    }   
+    .choose-your-pricing .header p{
+        font-size: 14pt;
+    }
+    .choose-your-pricing .pricing .price h1{
+        font-size: 20pt;
+    }
+    .choose-your-pricing .pricing .price h2{
+        font-size: 40pt;
+    }
+    .choose-your-pricing .pricing .price h2 sup{
+        font-size: 20pt;
+    }
+    .choose-your-pricing .pricing .price p.down-h2{
+        font-size: 10pt;
+    }
+    .choose-your-pricing .pricing .price div p{
+        font-size: 10pt;
+        padding: 10px 0;
+    }
+    .choose-your-pricing .pricing .price div button{
+        height: 30px;
+        width: 100px;
+    }
+}
+
+/* How it works */ 
+.how-it-work{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    top: 400px;
+    font-family: 'Lato', sans-serif;
+}
+.how-it-work .header{
+    text-align: center;
+    margin-bottom: 100px;
+}
+.how-it-work .header h1{
+    font-size: 30pt;
+}
+.how-it-work .header p{
+    font-size: 18pt;
+}
+.how-it-work .steps{
+    display: flex;
+    text-align: center;
+}
+.how-it-work .step h1{
+    font-size: 20pt;
+    font-weight: bold;
+    margin-top: 100px;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+}
+.how-it-work .step p{
+    font-size: 13pt;
+}
+.how-it-work .shape-up{
+    position: relative;
+    top: -50px;
+}
+.how-it-work .shape-down{
+    position: relative;
+    top: 90px;
+}
+.how-it-work button{
+    margin-top: 100px;
+    font-size: 14pt;
+    text-transform: uppercase;
+    width: 200px;
+    height: 50px;
+    background-color: #ffbb42;
+    color: white;
+    border-style: none;
+    transition: 1s;
+}
+.how-it-work button:hover{
+    background-color: #ffa200;
+}
+
+@media only screen and (max-width: 1224px) {
+    .how-it-work .header h1{
+        font-size: 25pt;
+    }
+    .how-it-work .header p{
+        font-size: 16pt;
+    }
+    .how-it-work button{
+        font-size: 14pt;
+        width: 200px;
+        height: 50px;
+    }
+    .how-it-work .step h1{
+        font-size: 16pt;
+        margin-top: 20px;
+        margin-bottom: 10px;
+    }
+    .how-it-work .step {
+        margin-bottom: 40px;
+    }
+    .how-it-work button {
+        margin: 0;
+    }
+}
+
+@media only screen and (max-width: 900px) {
+    .shape-up, .shape-down {
+        display: none;
+    }
+    .how-it-work .steps{
+        display: flex;
+        flex-direction: column;
+    }
+    .how-it-work .step {
+        width: 80vw;
+    }
+}
+
+/* Happy clients */
+.happy-clients{
+    margin-top: 500px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #ffc155;
+    font-family: 'Open Sans', sans-serif;
+}
+.happy-clients .header{
+    text-align: center;
+    padding-top: 100px;
+    padding-bottom: 50px;
+    color: white;
+}
+.happy-clients .header h1{
+    font-size: 30pt;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+.happy-clients .header p{
+    font-size: 16pt;
+}
+.happy-clients .columns{
+    display: flex;
+}
+.happy-clients .columns .left{
+    margin-left: 50px;
+}
+.happy-clients .columns .right{
+    margin-right: 50px;
+}
+.happy-clients .client{
+    padding: 20px;
+    display: flex;
+    background-color: white;
+    margin: 20px;
+    height: 300px;
+    color: #7b7b7b;   
+}
+.happy-clients .client img{
+    border-radius: 100px;
+    height: 150px !important;
+    min-width: 150px;
+    padding: 10px;
+    margin-top: 20px;
+}
+.happy-clients .client .text p {
+    padding-left: 10px;
+    padding-top: 50px;
+    font-size: 13pt;
+}
+.happy-clients .client .mark-up{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 30pt;
+    top: 10px;
+    margin: 10px;
+}
+.happy-clients .client .mark-down{
+    position: relative;
+    font-size: 30pt;
+    left: 300px;
+    top: -10px
+}
+.happy-clients .client .name, .happy-clients .client .job{
+    position: relative;
+    left: -10px;
+    font-size: 14pt;
+    font-family: 'Lato', sans-serif;
+    text-transform: uppercase;
+}
+.happy-clients .client .name{
+    color: #f6772c;
+}
+
+@media only screen and (max-width: 1370px) {
+    .happy-clients .client .text p {
+        font-size: 12pt;
+    }
+    .happy-clients .client .name, .happy-clients .client .job{
+        font-size: 12pt;
+    }
+}
+
+@media only screen and (max-width: 1268px) {
+    .happy-clients .columns{
+        flex-direction: column;
+    }
+    .happy-clients .client {
+        width: 80vw;
+    }
+    .happy-clients .columns .left{
+        margin-left: 0;
+    }
+    .happy-clients .columns .right{
+        margin-right: 0;
+    }
+}
+
+@media only screen and (max-width: 700px) {
+    .happy-clients .client .text p{
+        font-size: 10pt;
+    }
+    .happy-clients .client .name, .happy-clients .client .job{
+        font-size: 10pt;
+    }
+    .happy-clients .client{
+        padding: 10px;
+        height: 220px;
+    }
+    .happy-clients .client .mark-up, .happy-clients .client .mark-down{
+        display: none;
+    }
+    .happy-clients .client img{
+        height: 100px !important;
+        min-width: 100px;
+        padding: 5px;
+        margin-top: 10px;
+    }
+}
+@media only screen and (max-width: 480px) {
+    .happy-clients .client{
+        flex-direction: column;
+    }
+    .happy-clients .client img{
+        height: 70px !important;
+        max-width: 30px;
+        text-align: center;
+    }
+    .happy-clients .client .text p{
+        padding: 0;
+        padding-left: 5px;
+        font-size: 8pt;
+    }
+    .happy-clients .client .name, .happy-clients .client .job{
+        padding-left: 5px;
+        font-size: 8pt;
+    }
+    .happy-clients .client{
+        height: 200px;
+    }
+}
+/* Contact */
+.contact{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+}
+
+.contact .header{
+    text-align: center;
+    font-family: 'Open Sans', sans-serif;
+}
+.contact .header h1 {
+    font-size: 30pt;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+.contact .header p{
+    font-size: 16pt;
+}
+.contact .formRequest input {
+    font-size: 14pt;
+    border-color: #cbcbcb;
+}
+.contact .formRequest .user input{
+    width: 400px;
+    margin-right: 10px;
+}
+.contact .formRequest .email input{
+    width: 600px;
+    margin-right: 10px;
+}
+.contact .formRequest i.fa{
+    font-size: 20px;
+    margin-left: 10px;
+}
+.contact .formRequest button{
+    margin-left: 0px;
+}
+.contact .formRequest button:hover{
+    background-color: #ffa200;
+}
+
+@media only screen and (max-width: 1300px) {
+    .contact .header h1 {
+        font-size: 27pt;
+    }
+    .contact .header p{
+        font-size: 15pt;
+    }
+    .contact .formRequest input {
+        font-size: 14pt;
+    }
+    .contact .formRequest .user input{
+        width: 350px;
+        margin: 0px;
+    }
+    .contact .formRequest .email input{
+        width: 400px;
+        margin: 0px;
+    }
+    .contact .formRequest i.fa{
+        font-size: 20px;
+    }
+}
+
+@media only screen and (max-width: 970px) {
+    .contact .formRequest {
+        flex-direction: column;
+        justify-content: center;
+    }
+    .contact .formRequest .user input{
+        margin-left: 5px;
+        width: 400px;
+        margin-bottom: 10px;
+    }
+    .contact .formRequest button{
+        margin-top: 10px;
+        margin-left: 90px;
+    }
+}
+
+@media only screen and (max-width: 900px) {
+    .contact .formRequest button {
+        margin-left: 100px;
+    }
+}
+@media only screen and (max-width: 650px) {
+    .contact .formRequest .user input, .contact .formRequest .email input{
+        width: 350px;
+    }
+    .contact .formRequest button {
+        width: 150px;
+        height: 30px;
+        font-size: 10pt;
+    }
+}
+
+.map{
+    background-image: url('../img/map.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    text-align: center;
+    padding: 100px;
+    padding-top: 50px;
+    width: 100%;
+}
+.map .info{
+    padding: 100px;
+    text-align: center;
+    background-image: url('../img/SVG/shape-message.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;    
+}
+.map .info h1{
+    font-family: 'Lato', sans-serif;
+    text-transform: uppercase;
+    font-size: 15pt;
+    color: white;
+    padding-bottom: 10px;
+}
+.map .info p{
+    margin: 5px;
+    font-size: 13pt;
+    font-family: 'Open Sans', sans-serif;
+    color: #97a1a5;
+}
+.map .info p.email{
+    color: #ffbb42;
+}
+
+footer {
+    margin-top: 100px;
+    width: 60%;
+}
+footer .contact .phone{
+    display: flex;
+    font-family: 'Lato', sans-serif;
+    font-size: 22pt;
+}
+footer .contact .phone i.fa{
+    margin: 0;
+    padding: 0;
+    margin-right: 10px;
+    margin-top: 5px;
+}
+footer .soc ul{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    list-style-type: none;
+    margin: 10px;
+}
+footer .soc li{
+    margin: 10px;
+}
+.footer{
+    padding: 10px;
+    width: 100%;
+    text-align: center;
+    font-size: 13pt;
+    background-color: #709dca;
+    color: white;
+}
+

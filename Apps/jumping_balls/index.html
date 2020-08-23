@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/style.min.css">
+    <title>Jumping balls</title>
+</head>
+<body>
+    <div class="modal" id="start">
+        <div class="modal__text">Game balls</div>
+        <button class="modal__btn-start" id="btnStart">Start</button>
+    </div>
+
+    <div class="modal no-display" id="end">
+        <div class="modal__text">
+            <span>You won</span> <br>
+            <span>count miss: </span> <span id="countMiss"></span>    
+        </div>
+        <button class="modal__btn-start" id="btnRestart">Restart</button>
+    </div>
+
+    <div class="game">
+        <div class="game__count">
+            <span>Balls count: </span> <span id="count"></span>
+        </div>
+        <div class="game__miss">
+            <span>Miss: </span> <span id="miss"></span>
+        </div>
+    </div>
+
+    <canvas class="no-display"></canvas>
+    <script src="scripts/script.min.js"></script>
+</body>
+</html>

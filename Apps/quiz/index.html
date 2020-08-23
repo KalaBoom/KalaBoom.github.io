@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/style.min.css">
+    <title>Quiz</title>
+</head>
+<body>
+    <div class="body">
+        <h1 class="h1">Викторина</h1>
+        
+        <section class="choose-level" id="levelsBlock">
+            <div class="choose-level__head">
+                Выберите уровень
+                <ul class="choose-level__list" id="levelsList">
+                    <li class="choose-level__list__item">уровень 1</li> <br>
+                    <li class="choose-level__list__item">уровень 2</li> <br>
+                    <li class="choose-level__list__item">уровень 3</li> <br>
+                </ul>
+            </div>
+        </section>
+        
+        <section class="quiz display-none" id="quiz">
+            <div class="question" id="question">Тут должен быть вопрос</div> 
+            <div class="answer" id="answer">
+                <ul id="radio-buttons">
+                    <li>
+                        <input type="radio" name="Ans" id="One">
+                        <label for="One" id="AnsOne"></label>
+                    </li>
+                    <li>
+                        <input type="radio" name="Ans" id="Two">
+                        <label for="Two" id="AnsTwo"></label>
+                    </li> 
+                    <li>
+                        <input type="radio" name="Ans" id="Three">
+                        <label for="Three" id="AnsThree"></label>
+                    </li> 
+                    <li>
+                        <input type="radio" name="Ans" id="Four">
+                        <label for="Four" id="AnsFour"></label>
+                    </li>  
+                </ul>
+            </div>
+            <button class="btn-answer" id="btnAnswer">Ответить</button>
+            <br>
+            <button class="btn-answer" id="btnLevels">Уровни</button>
+        </section>
+    </div>
+    <script src="scripts/main.min.js"></script>
+</body>
+</html>
